@@ -1,170 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Behno</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        /* section 1 ============================================= */
-        .section1,
-        .section2 {
-            height: 100vh;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
+      /* section 1 ============================================= */
+      .section1,
+      .section2 {
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
 
-        .section1 {
-            background-image: url(/images/bgimage1.png);
-            background: "black";
-        }
+      .section1 {
+        background-image: url(/images/bgimage1.png);
+        background: "black";
+      }
 
-        .pinpoint1 {
-            height: 100vh;
-            opacity: 0.5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+      .pinpoint1 {
+        height: 100vh;
+        opacity: 0.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-        .section2child2 {
-            height: 100vh;
-            opacity: 0.5;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+      .section2child2 {
+        height: 100vh;
+        opacity: 0.5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
 
-        .section2child2 .textfor {
-            max-width: 500px;
-        }
+      .section2child2 .textfor {
+        max-width: 500px;
+      }
 
-        .textfor {
-            font-family: Adobe Caslon Pro;
-            font-size: 13px;
-            font-weight: 400;
-            line-height: 15.6px;
-            letter-spacing: 0.02em;
-            text-align: center;
-            color: #fff;
-        }
+      .textfor {
+        font-family: Adobe Caslon Pro;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 15.6px;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #fff;
+      }
 
-        .section2 {
-            background-image: url(/images/bgimage2.png);
-            transform: translateY(70px);
-        }
+      .section2 {
+        background-image: url(/images/bgimage2.png);
+        transform: translateY(70px);
+      }
 
-        /* section 2 ============================================= */
+      /* section 2 ============================================= */
 
-        .banner-parent {
-            position: relative;
-        }
+      .banner-parent {
+        position: relative;
+      }
 
-        .heading-text {
-            font-weight: 400;
-            font-size: 57px;
-            line-height: 52px;
-            position: absolute;
-            top: 45%;
-            right: 8%;
-            color: white;
-        }
+      .heading-text {
+        font-weight: 400;
+        font-size: 57px;
+        line-height: 52px;
+        position: absolute;
+        top: 45%;
+        right: 8%;
+        color: white;
+      }
 
-        .left {
-            height: 100vh;
-            width: 100%;
-            background: url(images/bggirl1.png);
-            background-position: left;
-            background-repeat: no-repeat;
-            background-size: cover;
-
-        }
+      .left {
+        height: 100vh;
+        width: 100%;
+        background: url(images/bggirl1.png);
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 
         .rightside {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 2.26px;
             width: 100%;
+            /* transform: translateX(100%); */
             background-color: white;
-            opacity: 1;
         }
 
         .rightside img {
             width: 100%;
         }
 
+      .left,
+      .secleft {
+        position: relative;
+      }
 
-        .rightside3 {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2.26px;
-            width: 100%;
-            background-color: white;
-            opacity: 1;
-        }
+      .heading-text-bottom {
+        position: absolute;
+        top: 90%;
+        right: 8%;
+        color: white;
+        font-family: Helvetica Neue;
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 13.64px;
+        letter-spacing: 0.11em;
+        text-align: center;
+      }
 
-        .rightside3 img {
-            width: 100%;
-        }
+      /* section 3 ============================================= */
 
+      .videoHeading {
+        background-color: #fff;
+        text-align: center;
+        padding: 45px 0;
+        font-family: PP Editorial New;
+        font-size: 35px;
+        font-style: italic;
+        font-weight: 200;
+        line-height: 50.05px;
+        text-align: center;
+        color: #581a1a;
+      }
 
+      /* section 4 ============================================= */
 
-
-
-
-
-        .left,
-        .secleft {
+        .section4inner {
             position: relative;
         }
-
-        .heading-text-bottom {
-            position: absolute;
-            top: 90%;
-            right: 8%;
-            color: white;
-            font-family: Helvetica Neue;
-            font-size: 21px;
-            font-weight: 700;
-            line-height: 13.64px;
-            letter-spacing: 0.11em;
-            text-align: center;
-        }
-
-        /* section 3 ============================================= */
-
-        .videoHeading {
-            background-color: #fff;
-            text-align: center;
-            padding: 45px 0;
-            font-family: PP Editorial New;
-            font-size: 35px;
-            font-style: italic;
-            font-weight: 200;
-            line-height: 50.05px;
-            text-align: center;
-            color: #581a1a;
-        }
-
-        /* section 4 ============================================= */
-
-        /* .section4inner,
-        .banner-parent {
-            position: relative;
-        } */
-
 
         .section4left {
             height: 100vh;
@@ -175,152 +151,154 @@
             background-image: url("images/section3.png");
         }
 
-        /* .rightside2 {
+        .rightside2 {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 2.26px;
             width: 100%;
             background-color: white;
-        } */
+        }
 
+        .rightside2 img {
+            width: 100%;
+        }
 
         /* end */
 
-        /* section 5 ============================================= */
+      /* section 5 ============================================= */
 
-        .maisonsec {
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-image: url(images/maison.png);
-            width: 100%;
-            height: 100vh;
-            background-attachment: fixed;
+      .maisonsec {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: url(images/maison.png);
+        width: 100%;
+        height: 100vh;
+        background-attachment: fixed;
+      }
+
+      .cantant {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        gap: 87px;
+      }
+
+      #text-anim {
+        font-family: PP Editorial New;
+        font-size: 31px;
+        font-style: italic;
+        font-weight: 200;
+        line-height: 44.33px;
+        text-align: center;
+        color: #ffffff;
+      }
+
+      .btn {
+        padding: 7px 25px 7px 25px;
+        background-color: #ffffff;
+        font-family: Adobe Caslon Pro;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22.8px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        text-decoration: none;
+        color: #000000;
+        margin-right: 25px;
+      }
+
+      .staggerEffect {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 30px;
+      }
+
+      /* end */
+      .bannerbg {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+
+      .bgtwo {
+        background: url(/section3.png);
+      }
+
+      .gridd {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 100%;
+      }
+
+      .footer-textcontainer div {
+        display: inline-block;
+      }
+
+      @media only screen and (max-width: 1150px) {
+        .heading-text {
+          font-size: 45px;
+          line-height: 60px;
+          right: 10%;
         }
 
-        .cantant {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-            gap: 87px;
+        .heading-text-bottom {
+          font-size: 22px;
+          right: 15%;
+        }
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .left {
+          background-size: cover;
+          background-position: center;
         }
 
-        #text-anim {
-            font-family: PP Editorial New;
-            font-size: 31px;
-            font-style: italic;
-            font-weight: 200;
-            line-height: 44.33px;
-            text-align: center;
-            color: #ffffff;
+        .heading-text,
+        .heading-text-bottom {
+          right: 0;
+          left: 0;
+          text-align: center;
         }
+      }
 
-        .btn {
-            padding: 7px 25px 7px 25px;
-            background-color: #ffffff;
-            font-family: Adobe Caslon Pro;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 22.8px;
-            letter-spacing: 0.02em;
-            text-align: left;
-            text-decoration: none;
-            color: #000000;
-            margin-right: 25px;
-        }
-
-        .staggerEffect {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 30px;
-        }
-
-        /* end */
-        .bannerbg {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-        }
-
-        .bgtwo {
-            background: url(/section3.png);
+      @media only screen and (max-width: 768px) {
+        .left {
+          height: 100vh;
+          width: 100%;
+          max-width: 100%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: top;
+          background-image: url(images/resbgimg.png);
+          background-attachment: fixed;
         }
 
         .gridd {
-            display: grid;
-            grid-template-columns: 50% 50%;
-            width: 100%;
+          grid-template-columns: 0% 100%;
         }
-
-        .footer-textcontainer div {
-            display: inline-block;
-        }
-
-
-
-        @media only screen and (max-width: 1150px) {
-            .heading-text {
-                font-size: 45px;
-                line-height: 60px;
-                right: 10%;
-            }
-
-            .heading-text-bottom {
-                font-size: 22px;
-                right: 15%;
-            }
-        }
-
-        @media only screen and (max-width: 1024px) {
-            .left {
-                background-size: cover;
-                background-position: center;
-            }
-
-            .heading-text,
-            .heading-text-bottom {
-                right: 0;
-                left: 0;
-                text-align: center;
-            }
-        }
-
-        @media only screen and (max-width: 768px) {
-            .left {
-                height: 100vh;
-                width: 100%;
-                max-width: 100%;
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: top;
-                background-image: url(images/resbgimg.png);
-                background-attachment: fixed;
-            }
-
-            .gridd {
-                grid-template-columns: 0% 100%;
-            }
 
             .rightside {
                 width: 100%;
+                transform: translateX(0);
                 gap: 1.26px;
             }
 
-            .heading-text {
-                text-align: center;
-                font-size: 36px;
-            }
+        .heading-text {
+          text-align: center;
+          font-size: 36px;
+        }
 
-            .heading-text-bottom {
-                text-align: center;
-                font-size: 15px;
-                top: 90%;
-                bottom: 10%;
-            }
+        .heading-text-bottom {
+          text-align: center;
+          font-size: 15px;
+          top: 90%;
+          bottom: 10%;
+        }
 
             .section4left {
                 height: 100vh;
@@ -335,35 +313,36 @@
 
             .rightside2 {
                 width: 100%;
+                transform: translateX(0);
             }
 
         }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- section 1 ===================================== start -->
     <section style="overflow: hidden">
-        <div class="section1"></div>
-        <div class="pinpoint1">
-            <img src="/images/firstsectext.png" alt="firstsectext" />
-        </div>
-        <div class="pinpoint1">
-            <img src="/images/bhenologo.png" alt="firstsectext" />
-        </div>
-        <div class="section2"></div>
-        <div class="pinpoint1">
-            <img src="/images/bhenologo.png" alt="firstsectext" />
-        </div>
-        <div class="section2child2">
-            <img src="/images/bhenologo.png" alt="firstsectext" />
-            <h2 class="textfor">
-                Every considered detail comes together at our Maison from the
-                tanneries to the thread manufacturers to the artisans constructing our
-                leather objects to our packaging experts and this vast supply chain is
-                enveloped into the Maison de behno family.
-            </h2>
-        </div>
+      <div class="section1"></div>
+      <div class="pinpoint1">
+        <img src="/images/firstsectext.png" alt="firstsectext" />
+      </div>
+      <div class="pinpoint1">
+        <img src="/images/bhenologo.png" alt="firstsectext" />
+      </div>
+      <div class="section2"></div>
+      <div class="pinpoint1">
+        <img src="/images/bhenologo.png" alt="firstsectext" />
+      </div>
+      <div class="section2child2">
+        <img src="/images/bhenologo.png" alt="firstsectext" />
+        <h2 class="textfor">
+          Every considered detail comes together at our Maison from the
+          tanneries to the thread manufacturers to the artisans constructing our
+          leather objects to our packaging experts and this vast supply chain is
+          enveloped into the Maison de behno family.
+        </h2>
+      </div>
     </section>
 
     <!-- section 1 ===================================== end -->
@@ -374,13 +353,15 @@
         <div class="parent">
             <div class="baner-parent">
                 <div class="left">
+                    <!-- <img class="bannerbg" src="/Group 23.png" alt="image" /> -->
                     <h1 class="heading-text">The epitome of luxury.</h1>
                     <h1 class="heading-text-bottom">SHOP BEHNO SIGNATURES.</h1>
                 </div>
             </div>
             <div class="gridd">
                 <div></div>
-                <div class="rightside" id="imageContainer">
+                <div class="rightside imageContainer">
+                    <!-- Images will be dynamically added here by JavaScript -->
                 </div>
             </div>
         </div>
@@ -391,12 +372,12 @@
     <!-- section 3 ===================================== start -->
 
     <section>
-        <div class="videoHeading">Explore the Maison de behno.</div>
-        <video width="100%" height="100%" poster="images/poster.png" controls>
-            <source src="movie.mp4" type="video/mp4" />
-            <source src="movie.ogg" type="video/ogg" />
-            Your browser does not support the video tag.
-        </video>
+      <div class="videoHeading">Explore the Maison de behno.</div>
+      <video width="100%" height="100%" poster="images/poster.png" controls>
+        <source src="movie.mp4" type="video/mp4" />
+        <source src="movie.ogg" type="video/ogg" />
+        Your browser does not support the video tag.
+      </video>
     </section>
 
     <!-- section 3 ===================================== end -->
@@ -413,7 +394,8 @@
             </div>
             <div class="gridd">
                 <div></div>
-                <div class="rightside3" id="imageContainer2">
+                <div class="rightside imageContainer">
+                    <!-- Images will be dynamically added here by JavaScript -->
                 </div>
             </div>
         </div>
@@ -423,41 +405,47 @@
 
     <!-- section 5=======================================start -->
     <section>
-        <div class="maisonsec">
-            <div class="cantant">
-                <!-- <h2 class="textani">Explore leather luxury from the Maison.</h2> -->
-                <div class="footer-textcontainer">
-                    <h1 id="text-anim">I'm a text with elastic effect</h1>
-                </div>
-                <div class="staggerEffect">
-                    <div class="animbtn">
-                        <a class="btn" href="#">Metallics</a>
-                    </div>
-                    <div class="animbtn">
-                        <a class="btn" href="#">Crossbody bags</a>
-                    </div>
-                    <div class="animbtn">
-                        <a class="btn" href="#">Shoulders bags</a>
-                    </div>
-                    <div class="animbtn">
-                        <a class="btn" href="#">Mini bags</a>
-                    </div>
-                    <div class="animbtn">
-                        <a class="btn" href="#">Embellished</a>
-                    </div>
-                </div>
+      <div class="maisonsec">
+        <div class="cantant">
+          <!-- <h2 class="textani">Explore leather luxury from the Maison.</h2> -->
+          <div class="footer-textcontainer">
+            <h1 id="text-anim">I'm a text with elastic effect</h1>
+          </div>
+          <div class="staggerEffect">
+            <div class="animbtn">
+              <a class="btn" href="#">Metallics</a>
             </div>
+            <div class="animbtn">
+              <a class="btn" href="#">Crossbody bags</a>
+            </div>
+            <div class="animbtn">
+              <a class="btn" href="#">Shoulders bags</a>
+            </div>
+            <div class="animbtn">
+              <a class="btn" href="#">Mini bags</a>
+            </div>
+            <div class="animbtn">
+              <a class="btn" href="#">Embellished</a>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- section 5=======================================end -->
 
     <!-- gsap cdn============================ start -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- gsap cdn  ==============================end -->
 
     <!-- gsap script =========================== start -->
@@ -470,11 +458,11 @@
                     .timeline({
                         scrollTrigger: {
                             trigger: ".baner-parent",
-                            scrub: 3,
+                            scrub: 2,
                             start: "top top",
                             end: "60% center",
                             onUpdate: (self) => {
-                                if (self.progress >= 0.8 && !tl2Triggered) {
+                                if (self.progress >= 1 && !tl2Triggered) {
                                     tl2.play();
                                     tl2Triggered = true;
                                 }
@@ -488,6 +476,7 @@
                             position: "sticky",
                             top: 0,
                         },
+                        "a"
                     )
                     .to(".heading-text-bottom", {
                         opacity: 1,
@@ -509,10 +498,10 @@
                         ".rightside",
                         {
                             opacity: 0.5,
-                            scale: 0.8,
+                            scale: 0.9,
                         },
+                        "a"
                     );
-
 
                 // section 4 ================================================================== gsap
 
@@ -520,12 +509,12 @@
                     .timeline({
                         scrollTrigger: {
                             trigger: ".section4inner",
-                            scrub: 3,
+                            scrub: 1,
                             start: "top top",
                             end: "60% center",
                             onUpdate: (self) => {
                                 if (self.progress >= 1 && !tl44Triggered) {
-                                    tl44.play();
+                                    tl2.play();
                                     tl44Triggered = true;
                                 }
                             },
@@ -538,176 +527,157 @@
                             position: "sticky",
                             top: 0,
                         },
+                        "a"
                     )
 
                 let tl44Triggered = false;
-
                 const tl44 = gsap
                     .timeline({
-                        paused: true,
                         scrollTrigger: {
                             trigger: ".rightside2",
                             start: "top bottom",
                             end: "top bottom",
-                            scrub: 3,
+                            scrub: 1,
                         },
                     })
-                    .from(
-                        ".rightside2",
-                        {
-                            opacity: 0.5,
-                            scale: 0.8,
-                        },
-                    );
+                    .from(".rightside2", {
+                        opacity: 0.5,
+                        scale: 0.9,
+                    });
 
+                // section 4 ================================================================== gsap
 
             },
         });
-        // section 4 ================================================================== gsap
 
 
 
-        // section 1================================================================== gsap
-        const tlbanner = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".section1",
-                scrub: 3,
-                start: "top top",
-                end: "bottom -100%",
-                pin: true,
-                pinSpacing: false,
-                anticipatePin: 1,
-            },
-        });
+      // section 1================================================================== gsap
+      const tlbanner = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".section1",
+          scrub: 3,
+          start: "top top",
+          end: "bottom -100%",
+          pin: true,
+          pinSpacing: false,
+          anticipatePin: 1,
+        },
+      });
 
-        tlbanner.fromTo(
-            ".section1",
-            {
-                // backgroundColor: "#000", // starting background color
-                // opacity: 0.9, // starting opacity
-                scale: 1,
-            },
-            {
-                // backgroundColor: "#ff0000", // ending background color
-                // opacity: 1, // ending opacity
-                scale: 1.2,
-            }
+      tlbanner.fromTo(
+        ".section1",
+        {
+          scale: 1,
+        },
+        {
+          scale: 1.2,
+        }
+      );
+
+      const t2banner = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".section2",
+          scrub: 3,
+          start: "0% 0%",
+          end: "bottom -100%",
+          pin: true,
+          pinSpacing: false,
+          anticipatePin: 1,
+        },
+      });
+
+      t2banner.fromTo(
+        ".section2",
+        {
+          backgroundColor: "#000",
+          opacity: 0.9,
+          scale: 1,
+        },
+        {
+          backgroundColor: "#ff0000",
+          opacity: 1,
+          scale: 1.2,
+        }
+      );
+
+      gsap.from(".animbtn", {
+        y: 100,
+        duration: 0.5,
+        stagger: 0.2,
+        ease: "sine.out",
+        scrollTrigger: {
+          trigger: ".staggerEffect",
+          start: "top 80%",
+          end: "bottom 100%",
+          scrub: 3,
+        },
+      });
+
+      // smouth scroll effect
+
+      gsap.to(".textani", {
+        duration: 2,
+        text: "thank you for waiting",
+        delay: 1,
+      });
+
+      const scrollSpeed = 1.5; // Adjust the scroll speed (higher value = faster scroll)
+      const smoothScroll = true; // Enable or disable smooth scroll
+      let targetScrollPosition = window.scrollY; // Target scroll position
+      let isScrolling = false; // Flag to check if scrolling is in progress
+
+      // Function to handle scroll events
+      const scroll = (event) => {
+        event.preventDefault(); // Prevent default scroll behavior
+        const delta = event.deltaY * scrollSpeed; // Calculate scroll delta
+        targetScrollPosition += delta; // Update target scroll position
+
+        // Ensure target position is within bounds
+        targetScrollPosition = Math.max(
+          0,
+          Math.min(
+            targetScrollPosition,
+            document.documentElement.scrollHeight - window.innerHeight
+          )
         );
 
-        const t2banner = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".section2",
-                scrub: 3,
-                start: "0% 0%",
-                end: "bottom -100%",
-                pin: true,
-                pinSpacing: false,
-                anticipatePin: 1,
-            },
-        });
+        if (!isScrolling) {
+          isScrolling = true; // Set scrolling flag
+          window.requestAnimationFrame(smoothScrollTo); // Start smooth scroll animation
+        }
+      };
 
-        t2banner.fromTo(
-            ".section2",
-            {
-                backgroundColor: "#000",
-                opacity: 0.9,
-                scale: 1,
-            },
-            {
-                backgroundColor: "#ff0000",
-                opacity: 1,
-                scale: 1.2,
-            }
-        );
+      // Function to smoothly scroll to the target position
+      const smoothScrollTo = () => {
+        const currentY = window.scrollY; // Get current scroll position
+        const diff = targetScrollPosition - currentY; // Calculate difference to target position
+        const scrollStep = diff / 20; // Calculate scroll step (adjust this value to control smoothness)
 
-        // gsap.from(".animbtn", {
-        //     y: 100,
-        //     duration: 0.5,
-        //     stagger: 0.2,
-        //     ease: "sine.out",
-        //     scrollTrigger: {
-        //         trigger: ".staggerEffect",
-        //         start: "top 80%",
-        //         end: "bottom 100% ",
-        //         scrub: 3,
-        //     },
-        // });
+        // Stop scrolling when close enough to the target or at scroll boundaries
+        if (
+          Math.abs(diff) > 1 &&
+          currentY !== 0 &&
+          currentY !==
+            document.documentElement.scrollHeight - window.innerHeight
+        ) {
+          window.scrollBy(0, scrollStep); // Scroll by the calculated step
+          window.requestAnimationFrame(smoothScrollTo); // Continue the animation
+        } else {
+          window.scrollTo(0, targetScrollPosition); // Directly scroll to the target position
+          isScrolling = false; // Reset scrolling flag
+        }
+      };
 
-        gsap.from(".animbtn", {
-            y: 100,
-            duration: 0.5,
-            stagger: 0.2,
-            ease: "sine.out",
-            scrollTrigger: {
-                trigger: ".staggerEffect",
-                start: "top 80%",
-                end: "bottom 100%",
-                scrub: 3,
-            },
-        });
+      // Add event listener for scroll events
+      window.addEventListener("wheel", scroll, { passive: false });
 
-        // smouth scroll effect
-
-        gsap.to(".textani", {
-            duration: 2,
-            text: "thank you for waiting",
-            delay: 1,
-        });
-
-        const scrollSpeed = 1.5; // Adjust the scroll speed (higher value = faster scroll)
-        const smoothScroll = true; // Enable or disable smooth scroll
-        let targetScrollPosition = window.scrollY; // Target scroll position
-        let isScrolling = false; // Flag to check if scrolling is in progress
-
-        // Function to handle scroll events
-        const scroll = (event) => {
-            event.preventDefault(); // Prevent default scroll behavior
-            const delta = event.deltaY * scrollSpeed; // Calculate scroll delta
-            targetScrollPosition += delta; // Update target scroll position
-
-            // Ensure target position is within bounds
-            targetScrollPosition = Math.max(
-                0,
-                Math.min(
-                    targetScrollPosition,
-                    document.documentElement.scrollHeight - window.innerHeight
-                )
-            );
-
-            if (!isScrolling) {
-                isScrolling = true; // Set scrolling flag
-                window.requestAnimationFrame(smoothScrollTo); // Start smooth scroll animation
-            }
-        };
-
-        // Function to smoothly scroll to the target position
-        const smoothScrollTo = () => {
-            const currentY = window.scrollY; // Get current scroll position
-            const diff = targetScrollPosition - currentY; // Calculate difference to target position
-            const scrollStep = diff / 20; // Calculate scroll step (adjust this value to control smoothness)
-
-            // Stop scrolling when close enough to the target or at scroll boundaries
-            if (
-                Math.abs(diff) > 1 &&
-                currentY !== 0 &&
-                currentY !==
-                document.documentElement.scrollHeight - window.innerHeight
-            ) {
-                window.scrollBy(0, scrollStep); // Scroll by the calculated step
-                window.requestAnimationFrame(smoothScrollTo); // Continue the animation
-            } else {
-                window.scrollTo(0, targetScrollPosition); // Directly scroll to the target position
-                isScrolling = false; // Reset scrolling flag
-            }
-        };
-
-        // Add event listener for scroll events
-        window.addEventListener("wheel", scroll, { passive: false });
-
-        // smouth scroll effect
-
+      // smouth scroll effect
 
         // dynamic image 
+        const imageContainers = document.querySelectorAll('.imageContainer');
+
+        // Array of image sources
         const images = [
             "/images/productimage1.png",
             "/images/productimage2.png",
@@ -719,74 +689,62 @@
             "/images/productimage2.png"
         ];
 
-        // Get the container where images will be placed
-        const imageContainer = document.getElementById('imageContainer');
-
-        // Use map to create image elements and append them to the container
-        images.map(src => {
-            const div = document.createElement('div');
-            const img = document.createElement('img');
-            img.src = src;
-            img.alt = "image";
-            div.appendChild(img);
-            imageContainer.appendChild(div);
-        });
 
 
-        // Get the container where images will be placed
-        const imageContainer2 = document.getElementById('imageContainer2');
-
-        // Use map to create image elements and append them to the container
-        images.map(src => {
-            const div = document.createElement('div');
-            const img = document.createElement('img');
-            img.src = src;
-            img.alt = "image";
-            div.appendChild(img);
-            imageContainer2.appendChild(div);
-        });
-
-
-
-
-        // footer text animation
-        document.addEventListener("DOMContentLoaded", function (event) {
-            animation_text_1("#text-anim");
-        });
-
-        function animation_text_1(element) {
-            var newText = "";
-            var theText = document.querySelector(element);
-            for (i = 0; i < theText.innerText.length; i++) {
-                newText += "<div>";
-                if (theText.innerText[i] == " ") { newText += "&nbsp;" }
-                else { newText += theText.innerText[i]; }
-                newText += "</div>";
-            }
-            theText.innerHTML = newText;
-            gsap.fromTo(element + " div", {
-                opacity: 0,
-                y: 90
-            }, {
-                duration: 2,
-                opacity: 1,
-                y: 0,
-                stagger: 0.03,
-                ease: "elastic(1.2, 0.5)",
-                scrollTrigger: {
-                    trigger: element,
-                    start: "top 70%", // start when the top of the <h1> reaches 70% down from the top of the viewport
-                    toggleActions: "restart none none reverse"
-                }
+        imageContainers.forEach(imageContainer => {
+            images.map(src => {
+                const div = document.createElement('div');
+                const img = document.createElement('img');
+                img.src = src;
+                img.alt = "image";
+                div.appendChild(img);
+                imageContainer.appendChild(div);
             });
+        });
+
+
+
+
+      // footer text animation
+      document.addEventListener("DOMContentLoaded", function (event) {
+        animation_text_1("#text-anim");
+      });
+
+      function animation_text_1(element) {
+        var newText = "";
+        var theText = document.querySelector(element);
+        for (i = 0; i < theText.innerText.length; i++) {
+          newText += "<div>";
+          if (theText.innerText[i] == " ") {
+            newText += "&nbsp;";
+          } else {
+            newText += theText.innerText[i];
+          }
+          newText += "</div>";
         }
-
-
-
-
+        theText.innerHTML = newText;
+        gsap.fromTo(
+          element + " div",
+          {
+            opacity: 0,
+            y: 90,
+          },
+          {
+            duration: 2,
+            opacity: 1,
+            y: 0,
+            stagger: 0.03,
+            ease: "elastic(1.2, 0.5)",
+            scrollTrigger: {
+              trigger: element,
+              start: "top 70%",
+              toggleActions: "restart none none reverse",
+            },
+          }
+        );
+      }
     </script>
 
     <!-- gsap script ==================== end  -->
-</body>
-
+  </body>
 </html>
