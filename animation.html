@@ -187,7 +187,7 @@
             gap: 87px;
         }
 
-        .cantant h2 {
+        #text-anim {
             font-family: PP Editorial New;
             font-size: 31px;
             font-style: italic;
@@ -235,6 +235,12 @@
             grid-template-columns: 50% 50%;
             width: 100%;
         }
+
+        .footer-textcontainer div {
+            display: inline-block;
+        }
+
+
 
         @media only screen and (max-width: 1150px) {
             .heading-text {
@@ -312,6 +318,7 @@
                 width: 100%;
                 transform: translateX(0);
             }
+
         }
     </style>
 </head>
@@ -403,7 +410,10 @@
     <section>
         <div class="maisonsec">
             <div class="cantant">
-                <h2 class="textani">Explore leather luxury from the Maison.</h2>
+                <!-- <h2 class="textani">Explore leather luxury from the Maison.</h2> -->
+                <div class="footer-textcontainer">
+                    <h1 id="text-anim">I'm a text with elastic effect</h1>
+                </div>
                 <div class="staggerEffect">
                     <div class="animbtn">
                         <a class="btn" href="#">Metallics</a>
@@ -438,7 +448,6 @@
     <!-- gsap script =========================== start -->
     <script>
         gsap.registerPlugin(ScrollTrigger);
-
         ScrollTrigger.matchMedia({
             // Desktop
             "(min-width: 769px)": function () {
@@ -680,7 +689,7 @@
         // smouth scroll effect
 
 
-        // Get all the containers where images will be placed
+        // dynamic image 
         const imageContainers = document.querySelectorAll('.imageContainer');
 
         // Array of image sources
@@ -707,6 +716,42 @@
                 imageContainer.appendChild(div);
             });
         });
+
+
+
+
+        // footer text animation
+        document.addEventListener("DOMContentLoaded", function (event) {
+            animation_text_1("#text-anim");
+        });
+
+        function animation_text_1(element) {
+            var newText = "";
+            var theText = document.querySelector(element);
+            for (i = 0; i < theText.innerText.length; i++) {
+                newText += "<div>";
+                if (theText.innerText[i] == " ") { newText += "&nbsp;" }
+                else { newText += theText.innerText[i]; }
+                newText += "</div>";
+            }
+            theText.innerHTML = newText;
+            gsap.fromTo(element + " div", {
+                opacity: 0,
+                y: 90
+            }, {
+                duration: 2,
+                opacity: 1,
+                y: 0,
+                stagger: 0.03,
+                ease: "elastic(1.2, 0.5)",
+                scrollTrigger: {
+                    trigger: element,
+                    start: "top 70%", // start when the top of the <h1> reaches 70% down from the top of the viewport
+                    toggleActions: "restart none none reverse"
+                }
+            });
+        }
+
 
 
 
