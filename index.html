@@ -25,7 +25,7 @@
       }
 
       .section1 {
-        background-image: url(/images/bgimage1.png);
+        background-image: url("./images/bgimage1.png");
         background: "black";
       }
 
@@ -61,7 +61,7 @@
       }
 
       .section2 {
-        background-image: url(/images/bgimage2.png);
+        background-image: url("./images/bgimage2.png");
         transform: translateY(70px);
       }
 
@@ -101,6 +101,7 @@
 
       .rightside img {
         width: 100%;
+        height: 100%;
       }
 
       .left,
@@ -122,6 +123,10 @@
       }
 
       /* section 3 ============================================= */
+
+      .video {
+        margin-bottom: -4px;
+      }
 
       .videoHeading {
         background-color: #fff;
@@ -148,8 +153,9 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: left;
-        background-image: url("images/section3.png");
+        background-image: url("./images/section3.png");
       }
+
       /* end */
 
       /* section 5 ============================================= */
@@ -158,7 +164,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        background-image: url(images/maison.png);
+        background-image: url("./images/maison.png");
         width: 100%;
         height: 100vh;
         background-attachment: fixed;
@@ -225,6 +231,24 @@
       .footer-textcontainer div {
         display: inline-block;
       }
+      .layer1,
+      .layer2 {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: black;
+        opacity: 0.4;
+      }
+      .herobaner{
+        position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          z-index: 3;
+      }
 
       @media only screen and (max-width: 1150px) {
         .heading-text {
@@ -261,8 +285,21 @@
           background-repeat: no-repeat;
           background-size: cover;
           background-position: top;
-          background-image: url(images/resbgimg.png);
+          background-image: url("./images/resbgimg.png");
           background-attachment: fixed;
+        }
+        .section1 {
+          background-image: url("./images/hero1.png");
+        }
+        .section2 {
+          background-image: url("./images/hero2.png");
+        }
+        .staggerEffect {
+          gap: 20px;
+        }
+
+        .pinpoint1 {
+          margin-top: -8px;
         }
 
         .gridd {
@@ -294,29 +331,44 @@
           background-repeat: no-repeat;
           background-size: cover;
           background-position: top;
-          background-image: url(/images/girlimage1.png);
+          background-image: url("./images/girlimage1.png");
           background-attachment: fixed;
         }
       }
+      /* .section1{
+        background-color: black;
+      } */
     </style>
   </head>
 
   <body>
     <!-- section 1 ===================================== start -->
     <section style="overflow: hidden">
-      <div class="section1"></div>
-      <div class="pinpoint1">
-        <img src="/images/firstsectext.png" alt="firstsectext" />
+      <div style="position: relative">
+        <div class="section1">
+          <div class="layer1"></div>
+        </div>
       </div>
-      <div class="pinpoint1">
-        <img src="/images/bhenologo.png" alt="firstsectext" />
+      <div
+       
+        class="pinpoint1 herobaner"
+      >
+        <img src="./images/firstsectext.png" alt="firstsectext" />
       </div>
-      <div class="section2"></div>
-      <div class="pinpoint1">
-        <img src="/images/bhenologo.png" alt="firstsectext" />
+      <div style="position: relative; z-index: 3" class="pinpoint1">
+        <img src="./images/bhenologo.png" alt="firstsectext" />
       </div>
-      <div class="section2child2">
-        <img src="/images/bhenologo.png" alt="firstsectext" />
+      <!-- <div class="sec1"> -->
+      <div style="position: relative">
+        <div class="section2">
+          <div class="layer2"></div>
+        </div>
+      </div>
+      <div style="position: relative; z-index: 3" class="pinpoint1">
+        <img src="./images/bhenologo.png" alt="firstsectext" />
+      </div>
+      <div style="position: relative; z-index: 3" class="section2child2">
+        <img src="./images/bhenologo.png" alt="firstsectext" />
         <h2 class="textfor">
           Every considered detail comes together at our Maison from the
           tanneries to the thread manufacturers to the artisans constructing our
@@ -324,6 +376,7 @@
           enveloped into the Maison de behno family.
         </h2>
       </div>
+      <!-- </div> -->
     </section>
 
     <!-- section 1 ===================================== end -->
@@ -354,7 +407,13 @@
 
     <section>
       <div class="videoHeading">Explore the Maison de behno.</div>
-      <video width="100%" height="100%" poster="images/poster.png" controls>
+      <video
+        class="video"
+        width="100%"
+        height="100%"
+        poster="images/poster.png"
+        controls
+      >
         <source src="movie.mp4" type="video/mp4" />
         <source src="movie.ogg" type="video/ogg" />
         Your browser does not support the video tag.
@@ -390,7 +449,7 @@
         <div class="cantant">
           <!-- <h2 class="textani">Explore leather luxury from the Maison.</h2> -->
           <div class="footer-textcontainer">
-            <h1 id="text-anim">I'm a text with elastic effect</h1>
+            <h1 id="text-anim">Explore leather luxury from the Maison.</h1>
           </div>
           <div class="staggerEffect">
             <div class="animbtn">
@@ -452,7 +511,8 @@
                 top: 0,
               },
               "a"
-            )
+            );
+          let tl2Triggered = false;
 
           // section 4 ================================================================== gsap
 
@@ -513,13 +573,9 @@
       t2banner.fromTo(
         ".section2",
         {
-          backgroundColor: "#000",
-          opacity: 0.9,
           scale: 1,
         },
         {
-          backgroundColor: "#ff0000",
-          opacity: 1,
           scale: 1.2,
         }
       );
@@ -602,14 +658,14 @@
 
       // Array of image sources
       const images = [
-        "/images/productimage1.png",
-        "/images/productimage2.png",
-        "/images/productimage3.png",
-        "/images/productimage1.png",
-        "/images/productimage2.png",
-        "/images/productimage3.png",
-        "/images/productimage1.png",
-        "/images/productimage2.png",
+        "./images/productimage1.png",
+        "./images/productimage2.png",
+        "./images/productimage3.png",
+        "./images/productimage1.png",
+        "./images/productimage2.png",
+        "./images/productimage3.png",
+        "./images/productimage1.png",
+        "./images/productimage2.png",
       ];
 
       imageContainers.forEach((imageContainer) => {
