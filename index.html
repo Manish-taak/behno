@@ -169,6 +169,7 @@
       width: 100%;
       height: 100vh;
       background-attachment: fixed;
+      overflow: hidden;
     }
 
     .cantant {
@@ -228,6 +229,11 @@
 
     .footer-textcontainer div {
       display: inline-block;
+    }
+
+
+    .section5 {
+      overflow: hidden !important;
     }
 
     @media only screen and (max-width: 1150px) {
@@ -315,7 +321,7 @@
 
 <body>
   <!-- section 1 ===================================== start -->
-  <section style="overflow: hidden">
+  <section style="overflow: hidden;">
     <div class="section1"></div>
     <div class="pinpoint1">
       <img src="./images/firstsectext.png" alt="firstsectext" />
@@ -397,7 +403,7 @@
   <!-- section 4 ===================================== end -->
 
   <!-- section 5=======================================start -->
-  <section>
+  <section class="section5" style="overflow: hidden; ">
     <div class="maisonsec">
       <div class="cantant">
         <!-- <h2 class="textani">Explore leather luxury from the Maison.</h2> -->
@@ -480,6 +486,21 @@
 
         // section 4 ================================================================== gsap
       },
+
+      "(max-width: 769px)": function () {
+        gsap.from(".left", {
+          scale: 1.7,
+          duration: 0.5,
+          ease: "sine.out",
+          scrollTrigger: {
+            trigger: ".baner-parent",
+            start: "top 80%",
+            end: "bottom 100%",
+            scrub: 3,
+            markers: true
+          },
+        });
+      }
     });
 
     // section 1================================================================== gsap
@@ -540,6 +561,18 @@
       },
     });
 
+
+    gsap.from(".section5", {
+      scale: 1.2,
+      scrollTrigger: {
+        trigger: ".maisonsec",
+        start: "top 80%",
+        end: "bottom 100%",
+        scrub: 3,
+      },
+    });
+
+
     // smouth scroll effect
 
     gsap.to(".textani", {
@@ -547,6 +580,10 @@
       text: "thank you for waiting",
       delay: 1,
     });
+
+
+
+
 
     const scrollSpeed = 1.5; // Adjust the scroll speed (higher value = faster scroll)
     const smoothScroll = true; // Enable or disable smooth scroll
