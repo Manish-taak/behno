@@ -97,13 +97,33 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 2.26px;
             width: 100%;
-            /* transform: translateX(100%); */
             background-color: white;
+            opacity: 1;
         }
 
         .rightside img {
             width: 100%;
         }
+
+
+        .rightside3 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.26px;
+            width: 100%;
+            background-color: white;
+            opacity: 1;
+        }
+
+        .rightside3 img {
+            width: 100%;
+        }
+
+
+
+
+
+
 
         .left,
         .secleft {
@@ -140,9 +160,11 @@
 
         /* section 4 ============================================= */
 
-        .section4inner {
+        /* .section4inner,
+        .banner-parent {
             position: relative;
-        }
+        } */
+
 
         .section4left {
             height: 100vh;
@@ -153,17 +175,14 @@
             background-image: url("images/section3.png");
         }
 
-        .rightside2 {
+        /* .rightside2 {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 2.26px;
             width: 100%;
             background-color: white;
-        }
+        } */
 
-        .rightside2 img {
-            width: 100%;
-        }
 
         /* end */
 
@@ -288,7 +307,6 @@
 
             .rightside {
                 width: 100%;
-                transform: translateX(0);
                 gap: 1.26px;
             }
 
@@ -317,7 +335,6 @@
 
             .rightside2 {
                 width: 100%;
-                transform: translateX(0);
             }
 
         }
@@ -357,15 +374,13 @@
         <div class="parent">
             <div class="baner-parent">
                 <div class="left">
-                    <!-- <img class="bannerbg" src="/Group 23.png" alt="image" /> -->
                     <h1 class="heading-text">The epitome of luxury.</h1>
                     <h1 class="heading-text-bottom">SHOP BEHNO SIGNATURES.</h1>
                 </div>
             </div>
             <div class="gridd">
                 <div></div>
-                <div class="rightside imageContainer">
-                    <!-- Images will be dynamically added here by JavaScript -->
+                <div class="rightside" id="imageContainer">
                 </div>
             </div>
         </div>
@@ -398,8 +413,7 @@
             </div>
             <div class="gridd">
                 <div></div>
-                <div class="rightside imageContainer">
-                    <!-- Images will be dynamically added here by JavaScript -->
+                <div class="rightside3" id="imageContainer2">
                 </div>
             </div>
         </div>
@@ -456,11 +470,11 @@
                     .timeline({
                         scrollTrigger: {
                             trigger: ".baner-parent",
-                            scrub: 2,
+                            scrub: 3,
                             start: "top top",
                             end: "60% center",
                             onUpdate: (self) => {
-                                if (self.progress >= 1 && !tl2Triggered) {
+                                if (self.progress >= 0.8 && !tl2Triggered) {
                                     tl2.play();
                                     tl2Triggered = true;
                                 }
@@ -474,7 +488,6 @@
                             position: "sticky",
                             top: 0,
                         },
-                        "a"
                     )
                     .to(".heading-text-bottom", {
                         opacity: 1,
@@ -496,10 +509,10 @@
                         ".rightside",
                         {
                             opacity: 0.5,
-                            scale: 0.9,
+                            scale: 0.8,
                         },
-                        "a"
                     );
+
 
                 // section 4 ================================================================== gsap
 
@@ -507,12 +520,12 @@
                     .timeline({
                         scrollTrigger: {
                             trigger: ".section4inner",
-                            scrub: 1,
+                            scrub: 3,
                             start: "top top",
                             end: "60% center",
                             onUpdate: (self) => {
                                 if (self.progress >= 1 && !tl44Triggered) {
-                                    tl2.play();
+                                    tl44.play();
                                     tl44Triggered = true;
                                 }
                             },
@@ -525,28 +538,32 @@
                             position: "sticky",
                             top: 0,
                         },
-                        "a"
                     )
 
                 let tl44Triggered = false;
+
                 const tl44 = gsap
                     .timeline({
+                        paused: true,
                         scrollTrigger: {
                             trigger: ".rightside2",
                             start: "top bottom",
                             end: "top bottom",
-                            scrub: 1,
+                            scrub: 3,
                         },
                     })
-                    .from(".rightside2", {
-                        opacity: 0.5,
-                        scale: 0.9,
-                    });
+                    .from(
+                        ".rightside2",
+                        {
+                            opacity: 0.5,
+                            scale: 0.8,
+                        },
+                    );
 
-                // section 4 ================================================================== gsap
 
             },
         });
+        // section 4 ================================================================== gsap
 
 
 
@@ -691,9 +708,6 @@
 
 
         // dynamic image 
-        const imageContainers = document.querySelectorAll('.imageContainer');
-
-        // Array of image sources
         const images = [
             "/images/productimage1.png",
             "/images/productimage2.png",
@@ -705,17 +719,31 @@
             "/images/productimage2.png"
         ];
 
+        // Get the container where images will be placed
+        const imageContainer = document.getElementById('imageContainer');
+
+        // Use map to create image elements and append them to the container
+        images.map(src => {
+            const div = document.createElement('div');
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = "image";
+            div.appendChild(img);
+            imageContainer.appendChild(div);
+        });
 
 
-        imageContainers.forEach(imageContainer => {
-            images.map(src => {
-                const div = document.createElement('div');
-                const img = document.createElement('img');
-                img.src = src;
-                img.alt = "image";
-                div.appendChild(img);
-                imageContainer.appendChild(div);
-            });
+        // Get the container where images will be placed
+        const imageContainer2 = document.getElementById('imageContainer2');
+
+        // Use map to create image elements and append them to the container
+        images.map(src => {
+            const div = document.createElement('div');
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = "image";
+            div.appendChild(img);
+            imageContainer2.appendChild(div);
         });
 
 
