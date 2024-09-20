@@ -637,7 +637,6 @@
       backgroundSize: "110%",
     });
 
-
     // smouth scroll effect
 
     gsap.to(".textani", {
@@ -646,55 +645,55 @@
       delay: 1,
     });
 
-    const scrollSpeed = 1.5; // Adjust the scroll speed (higher value = faster scroll)
-    const smoothScroll = true; // Enable or disable smooth scroll
-    let targetScrollPosition = window.scrollY; // Target scroll position
-    let isScrolling = false; // Flag to check if scrolling is in progress
+    // const scrollSpeed = 1.5; // Adjust the scroll speed (higher value = faster scroll)
+    // const smoothScroll = true; // Enable or disable smooth scroll
+    // let targetScrollPosition = window.scrollY; // Target scroll position
+    // let isScrolling = false; // Flag to check if scrolling is in progress
 
-    // Function to handle scroll events
-    const scroll = (event) => {
-      event.preventDefault(); // Prevent default scroll behavior
-      const delta = event.deltaY * scrollSpeed; // Calculate scroll delta
-      targetScrollPosition += delta; // Update target scroll position
+    // // Function to handle scroll events
+    // const scroll = (event) => {
+    //   event.preventDefault(); // Prevent default scroll behavior
+    //   const delta = event.deltaY * scrollSpeed; // Calculate scroll delta
+    //   targetScrollPosition += delta; // Update target scroll position
 
-      // Ensure target position is within bounds
-      targetScrollPosition = Math.max(
-        0,
-        Math.min(
-          targetScrollPosition,
-          document.documentElement.scrollHeight - window.innerHeight
-        )
-      );
+    //   // Ensure target position is within bounds
+    //   targetScrollPosition = Math.max(
+    //     0,
+    //     Math.min(
+    //       targetScrollPosition,
+    //       document.documentElement.scrollHeight - window.innerHeight
+    //     )
+    //   );
 
-      if (!isScrolling) {
-        isScrolling = true; // Set scrolling flag
-        window.requestAnimationFrame(smoothScrollTo); // Start smooth scroll animation
-      }
-    };
+    //   if (!isScrolling) {
+    //     isScrolling = true; // Set scrolling flag
+    //     window.requestAnimationFrame(smoothScrollTo); // Start smooth scroll animation
+    //   }
+    // };
 
-    // Function to smoothly scroll to the target position
-    const smoothScrollTo = () => {
-      const currentY = window.scrollY; // Get current scroll position
-      const diff = targetScrollPosition - currentY; // Calculate difference to target position
-      const scrollStep = diff / 20; // Calculate scroll step (adjust this value to control smoothness)
+    // // Function to smoothly scroll to the target position
+    // const smoothScrollTo = () => {
+    //   const currentY = window.scrollY; // Get current scroll position
+    //   const diff = targetScrollPosition - currentY; // Calculate difference to target position
+    //   const scrollStep = diff / 20; // Calculate scroll step (adjust this value to control smoothness)
 
-      // Stop scrolling when close enough to the target or at scroll boundaries
-      if (
-        Math.abs(diff) > 1 &&
-        currentY !== 0 &&
-        currentY !==
-        document.documentElement.scrollHeight - window.innerHeight
-      ) {
-        window.scrollBy(0, scrollStep); // Scroll by the calculated step
-        window.requestAnimationFrame(smoothScrollTo); // Continue the animation
-      } else {
-        window.scrollTo(0, targetScrollPosition); // Directly scroll to the target position
-        isScrolling = false; // Reset scrolling flag
-      }
-    };
+    //   // Stop scrolling when close enough to the target or at scroll boundaries
+    //   if (
+    //     Math.abs(diff) > 1 &&
+    //     currentY !== 0 &&
+    //     currentY !==
+    //     document.documentElement.scrollHeight - window.innerHeight
+    //   ) {
+    //     window.scrollBy(0, scrollStep); // Scroll by the calculated step
+    //     window.requestAnimationFrame(smoothScrollTo); // Continue the animation
+    //   } else {
+    //     window.scrollTo(0, targetScrollPosition); // Directly scroll to the target position
+    //     isScrolling = false; // Reset scrolling flag
+    //   }
+    // };
 
-    // Add event listener for scroll events
-    window.addEventListener("wheel", scroll, { passive: false });
+    // // Add event listener for scroll events
+    // window.addEventListener("wheel", scroll, { passive: false });
 
     // smouth scroll effect
 
