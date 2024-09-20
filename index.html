@@ -32,7 +32,6 @@
 
     .pinpoint1 {
       height: 100vh;
-      opacity: 0.5;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -40,11 +39,11 @@
 
     .section2child2 {
       height: 100vh;
-      opacity: 0.5;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: 0 14px;
     }
 
     .section2child2 .textfor {
@@ -161,7 +160,7 @@
 
     /* section 5 ============================================= */
 
-    .footer{
+    .footer {
       position: relative;
     }
 
@@ -294,14 +293,17 @@
         /* background-attachment: f; */
 
       }
-.baner-parent{
-  position: sticky;
-  top: 0;
-}
-.section4inner{
-  position: sticky;
-  top: 0;
-}
+
+      .baner-parent {
+        position: sticky;
+        top: 0;
+      }
+
+      .section4inner {
+        position: sticky;
+        top: 0;
+      }
+
       .section1 {
         background-image: url("./images/hero1.png");
       }
@@ -364,6 +366,16 @@
     /* .section1{
         background-color: black;
       } */
+    .power {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   </style>
 </head>
 
@@ -386,9 +398,9 @@
       <div class="section2">
         <div class="layer2"></div>
       </div>
-    </div>
-    <div style="position: relative; z-index: 3" class="pinpoint1">
-      <img src="./images/bhenologo.png" alt="firstsectext" />
+      <div style="z-index: 3" class="power">
+        <img src="./images/bhenologo.png" alt="firstsectext" />
+      </div>
     </div>
     <div style="position: relative; z-index: 3" class="section2child2">
       <img src="./images/bhenologo.png" alt="firstsectext" />
@@ -548,18 +560,28 @@
 
       "(max-width: 769px)": function () {
 
-        gsap.fromTo(".left", {
-          duration: 0.5,
-          backgroundSize: "120%",
-        }, {
+   const tl =     gsap.timeline({
           scrollTrigger: {
             trigger: ".left",
             start: "top 10%",
             end: "bottom 70%",
             scrub: 2,
           },
+        }).fromTo(".left", {
+          duration: 0.5,
+          backgroundSize: "120%",
+        }, {
+
           backgroundSize: "100%",
-        });
+        },"a").to(".heading-text",{
+          y:-250,
+          duration:0.5,
+          ease:"none"
+        },"a").to(".heading-text-bottom",{
+          y:-350,
+          duration:0.5,
+          ease:"none"
+        },"a")
 
         gsap.fromTo(".section4left", {
           // duration: 0.5,
