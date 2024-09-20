@@ -288,7 +288,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: top;
-        background-image: url("./images/resbgimg.png");
+        background-image: url("./images/maxheight.png");
         background-attachment: fixed;
       }
 
@@ -550,14 +550,15 @@
         });
 
         gsap.fromTo(".section4left", {
-          duration: 0.5,
-          backgroundSize: "120%",
+          // duration: 0.5,
+          backgroundSize: "110%",
         }, {
           scrollTrigger: {
             trigger: ".section4left",
             start: "top 10%",
             end: "bottom 70%",
             scrub: 1,
+            markers: true
           },
           backgroundSize: "100%",
         });
