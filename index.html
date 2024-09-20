@@ -560,7 +560,7 @@
 
       "(max-width: 769px)": function () {
 
-   const tl =     gsap.timeline({
+        const tl = gsap.timeline({
           scrollTrigger: {
             trigger: ".left",
             start: "top 10%",
@@ -573,28 +573,39 @@
         }, {
 
           backgroundSize: "100%",
-        },"a").to(".heading-text",{
-          y:-250,
-          duration:0.5,
-          ease:"none"
-        },"a").to(".heading-text-bottom",{
-          y:-350,
-          duration:0.5,
-          ease:"none"
-        },"a")
+        }, "a").to(".heading-text", {
+          y: -250,
+          duration: 0.5,
+          ease: "none"
+        }, "a").to(".heading-text-bottom", {
+          y: -350,
+          duration: 0.5,
+          ease: "none"
+        }, "a")
 
-        gsap.fromTo(".section4left", {
-          // duration: 0.5,
-          backgroundSize: "110%",
-        }, {
+
+        const tl2 = gsap.timeline({
           scrollTrigger: {
             trigger: ".section4left",
             start: "top 10%",
             end: "bottom 70%",
             scrub: 1,
           },
+        }).fromTo(".section4left", {
+          // duration: 0.5,
+          backgroundSize: "110%",
+        }, {
+
           backgroundSize: "100%",
-        });
+        }, "b").to(".heading-text", {
+          y: -250,
+          duration: 0.5,
+          ease: "none"
+        }, "b").to(".heading-text-bottom", {
+          y: -350,
+          duration: 0.5,
+          ease: "none"
+        }, "b")
 
       }
     });
