@@ -12,92 +12,30 @@
       box-sizing: border-box;
     }
 
-    /* section 1 ============================================= */
-    .section1,
-    .section2 {
-      height: 100vh;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-    }
-
-    .section1 {
-      background-image: url("./images/bgimage1.png");
-      background: "black";
-    }
-
-    .pinpoint1 {
-      height: 100vh;
-      opacity: 0.5;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .section2child2 {
-      height: 100vh;
-      opacity: 0.5;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .section2child2 .textfor {
-      max-width: 500px;
-    }
-
-    .textfor {
-      font-family: Adobe Caslon Pro;
-      font-size: 13px;
-      font-weight: 400;
-      line-height: 15.6px;
-      letter-spacing: 0.02em;
-      text-align: center;
-      color: #fff;
-    }
-
-    .section2 {
-      background-image: url("./images/bgimage2.png");
-      transform: translateY(70px);
-    }
+    /* section 1 css */
 
     /* section 2 ============================================= */
 
-    .banner-parent {
-      position: relative;
-    }
-
-    .heading-text {
+    .heading-text,
+    .heading-text2 {
       font-weight: 400;
       font-size: 57px;
       line-height: 52px;
-      position: absolute;
-      top: 45%;
-      right: 8%;
       color: white;
-    }
-
-    .left {
-      height: 100vh;
-      width: 100%;
-      background: url(images/bggirl1.png);
-      background-position: left;
-      background-repeat: no-repeat;
-      background-size: cover;
+      text-wrap: nowrap;
+      padding-top: 30%;
     }
 
     .rightside {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 2.26px;
       width: 100%;
-      /* transform: translateX(100%); */
-      background-color: white;
+      backdrop-filter: blur(100px);
+      position: relative;
+      z-index: 4;
+      background-image: linear-gradient(rgb(240 241 244), rgb(240 241 244));
+      background-color: #F0F1F4;
+      backdrop-filter: blur(100px);
     }
 
     .rightside img {
@@ -110,10 +48,8 @@
       position: relative;
     }
 
-    .heading-text-bottom {
-      position: absolute;
-      top: 90%;
-      right: 8%;
+    .heading-text-bottom,
+    .heading-text-bottom2 {
       color: white;
       font-family: Helvetica Neue;
       font-size: 21px;
@@ -121,26 +57,9 @@
       line-height: 13.64px;
       letter-spacing: 0.11em;
       text-align: center;
+      text-wrap: nowrap;
     }
 
-    /* section 3 ============================================= */
-
-    .video {
-      margin-bottom: -4px;
-    }
-
-    .videoHeading {
-      background-color: #fff;
-      text-align: center;
-      padding: 45px 0;
-      font-family: PP Editorial New;
-      font-size: 35px;
-      font-style: italic;
-      font-weight: 200;
-      line-height: 50.05px;
-      text-align: center;
-      color: #581a1a;
-    }
 
     /* section 4 ============================================= */
 
@@ -158,178 +77,76 @@
     }
 
     /* end */
-
     /* section 5 ============================================= */
 
-    .maisonsec {
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      background-image: url("./images/maison.png");
-      width: 100%;
-      height: 100vh;
-      background-attachment: fixed;
+
+    .heading-text2-res {
+      display: none;
+
     }
 
-    .cantant {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      height: 100vh;
-      gap: 87px;
-    }
 
-    #text-anim {
-      font-family: PP Editorial New;
-      font-size: 31px;
-      font-style: italic;
-      font-weight: 200;
-      line-height: 44.33px;
-      text-align: center;
-      color: #ffffff;
-    }
-
-    .btn {
-      padding: 7px 25px 7px 25px;
-      background-color: #ffffff;
-      font-family: Adobe Caslon Pro;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 22.8px;
-      letter-spacing: 0.02em;
-      text-align: left;
-      text-decoration: none;
-      color: #000000;
-      margin-right: 25px;
-    }
-
-    .staggerEffect {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 30px;
-    }
-
-    /* end */
-    .bannerbg {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-
-    .bgtwo {
-      background: url(/section3.png);
-    }
 
     .gridd {
       display: grid;
       grid-template-columns: 50% 50%;
       width: 100%;
+      position: relative;
+      z-index: 2;
     }
 
-    .footer-textcontainer div {
-      display: inline-block;
+
+
+
+    .scrollingtext,
+    .scrollingtext2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+      width: 50%;
+      height: 100vh;
+      margin: 0 auto;
     }
 
-    .layer1,
-    .layer2 {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: black;
-      opacity: 0.4;
+    .scrollingtext {
+      display: flex;
     }
 
-    .herobaner {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      z-index: 3;
+
+
+    .scrollingtext-res-section2 {
+      display: none;
     }
+
+
 
     @media only screen and (max-width: 1150px) {
-      .heading-text {
-        font-size: 45px;
+
+      .heading-text,
+      .heading-text2 {
+        font-size: 34px;
         line-height: 60px;
-        right: 10%;
       }
 
-      .heading-text-bottom {
-        font-size: 22px;
-        right: 15%;
+      .heading-text-bottom,
+      .heading-text-bottom2 {
+        font-size: 14px;
       }
     }
 
     @media only screen and (max-width: 1024px) {
-      .left {
-        background-size: cover;
-        background-position: center;
-      }
 
       .heading-text,
-      .heading-text-bottom {
-        right: 0;
-        left: 0;
+      .heading-text-bottom,
+      .heading-text2,
+      .heading-text-bottom2 {
         text-align: center;
       }
     }
 
     @media only screen and (max-width: 768px) {
-      .left {
-        height: 100vh;
-        width: 100%;
-        max-width: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: top;
-        background-image: url("./images/maxheight.png");
-        background-attachment: fixed;
-      }
-
-      .section1 {
-        background-image: url("./images/hero1.png");
-      }
-
-      .section2 {
-        background-image: url("./images/hero2.png");
-      }
-
-      .staggerEffect {
-        gap: 20px;
-      }
-
-      .pinpoint1 {
-        margin-top: -8px;
-      }
-
-      .gridd {
-        grid-template-columns: 0% 100%;
-      }
-
-      .rightside {
-        width: 100%;
-        transform: translateX(0);
-        gap: 1.26px;
-      }
-
-      .heading-text {
-        text-align: center;
-        font-size: 36px;
-      }
-
-      .heading-text-bottom {
-        text-align: center;
-        font-size: 15px;
-        top: 90%;
-        bottom: 10%;
-      }
-
       .section4left {
         height: 100vh;
         width: 100%;
@@ -338,146 +155,195 @@
         background-size: cover;
         background-position: top;
         background-image: url("./images/girlimage1.png");
-        background-attachment: fixed;
       }
 
-      .maisonsec {
-        background-image: url("./images/resfooter.png");
+
+
+      .scrollingtext {
+        display: none;
       }
 
-      .btn {
-        margin-right: 1;
+      .scrollingtext2 {
+        display: none;
       }
+
+      .heading-text-res-section2 {
+        padding-bottom: 134px;
+        font-family: Adobe Caslon Pro;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 32.76px;
+        text-align: center;
+      }
+
+      .heading-text-bottom-res-section2 {
+        font-family: Helvetica Neue;
+        font-size: 14.99px;
+        font-weight: 700;
+        line-height: 13.64px;
+        letter-spacing: 0.11em;
+        text-align: center;
+      }
+
+      .scrollingtext-res-section2 {
+        display: flex;
+        flex-direction: column;
+        gap: 123px;
+        position: relative;
+        z-index: 9;
+        color: #ffffff;
+        padding-bottom: 45px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-right: 13px;
+        padding-left: 14px;
+      }
+
+      .heading-text2 {
+        display: none;
+      }
+
+      .heading-text2-res {
+        display: block;
+        font-size: 34px;
+        line-height: 60px;
+        font-weight: 400;
+        font-size: 57px;
+        line-height: 52px;
+        color: white;
+        text-wrap: nowrap;
+        padding-top: 30%;
+      }
+
+
+      .section4inner {
+        position: sticky;
+        top: 0;
+      }
+
+      .scrollingtext,
+      .scrollingtext2 {
+        justify-content: end;
+        height: 98vh;
+        margin: 0 auto;
+        gap: 40%;
+      }
+
+
+
+      .gridd {
+        grid-template-columns: 0% 100%;
+      }
+
+      .rightside {
+        width: 100%;
+        transform: translateX(0);
+      }
+
+      .heading-text,
+      .heading-text2 {
+        text-align: center;
+        font-size: 36px;
+        text-wrap: nowrap;
+      }
+
+      .heading-text-bottom,
+      .heading-text-bottom2 {
+        text-align: center;
+        font-size: 15px;
+      }
+
+
+
+
+
     }
-
-    /* .section1{
-        background-color: black;
-      } */
   </style>
 </head>
 
 <body>
-  <!-- section 1 ===================================== start -->
-  <section style="overflow: hidden">
-    <div style="position: relative">
-      <div class="section1">
-        <div class="layer1"></div>
-      </div>
-    </div>
-    <div class="pinpoint1 herobaner">
-      <img src="./images/firstsectext.png" alt="firstsectext" />
-    </div>
-    <div style="position: relative; z-index: 3" class="pinpoint1">
-      <img src="./images/bhenologo.png" alt="firstsectext" />
-    </div>
-    <!-- <div class="sec1"> -->
-    <div style="position: relative">
-      <div class="section2">
-        <div class="layer2"></div>
-      </div>
-    </div>
-    <div style="position: relative; z-index: 3" class="pinpoint1">
-      <img src="./images/bhenologo.png" alt="firstsectext" />
-    </div>
-    <div style="position: relative; z-index: 3" class="section2child2">
-      <img src="./images/bhenologo.png" alt="firstsectext" />
-      <h2 class="textfor">
-        Every considered detail comes together at our Maison from the
-        tanneries to the thread manufacturers to the artisans constructing our
-        leather objects to our packaging experts and this vast supply chain is
-        enveloped into the Maison de behno family.
-      </h2>
-    </div>
-    <!-- </div> -->
-  </section>
-
-  <!-- section 1 ===================================== end -->
-
-  <!-- section 2 ===================================== start -->
-
-  <section>
-    <div class="parent">
-      <div class="baner-parent">
-        <div class="left">
-          <!-- <img class="bannerbg" src="/Group 23.png" alt="image" /> -->
-          <h1 class="heading-text">The epitome of luxury.</h1>
-          <h1 class="heading-text-bottom">SHOP BEHNO SIGNATURES.</h1>
-        </div>
-      </div>
-      <div class="gridd">
-        <div></div>
-        <div class="rightside imageContainer">
-          <!-- Images will be dynamically added here by JavaScript -->
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- section 2 ===================================== end -->
-
-  <!-- section 3 ===================================== start -->
-
-  <section>
-    <div class="videoHeading">Explore the Maison de behno.</div>
-    <video class="video" width="100%" height="100%" poster="images/poster.png" controls>
-      <source src="movie.mp4" type="video/mp4" />
-      <source src="movie.ogg" type="video/ogg" />
-      Your browser does not support the video tag.
-    </video>
-  </section>
-
-  <!-- section 3 ===================================== end -->
 
   <!-- section 4 ===================================== start -->
-
   <section>
     <div class="section4">
       <div class="section4inner">
         <div class="section4left">
-          <h1 class="heading-text">The testament to taste.</h1>
-          <h1 class="heading-text-bottom">SHOP BEHNO SIGNATURES.</h1>
+          <div class="scrollingtext2">
+            <h1 class="heading-text2">The testament to taste.</h1>
+            <h1 class=" heading-text2 heading-text2-res">The testament to taste.</h1>
+            <h1 class="heading-text-bottom2">SHOP BEHNO SIGNATURES.</h1>
+          </div>
         </div>
       </div>
       <div class="gridd">
         <div></div>
-        <div class="rightside imageContainer">
-          <!-- Images will be dynamically added here by JavaScript -->
+        <div>
+          <div style="height: fit-content">
+            <div class="scrollingtext-res-section2">
+              <h1 class="heading-text-res-section2">The testament to taste.</h1>
+              <h1 class="heading-text-bottom-res-section2">SHOP BEHNO SIGNATURES.</h1>
+            </div>
+          </div>
+          <div class="rightside imageContainer">
+          </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- section 4 ===================================== end -->
-
-  <!-- section 5=======================================start -->
   <section>
-    <div class="maisonsec">
-      <div class="cantant">
-        <!-- <h2 class="textani">Explore leather luxury from the Maison.</h2> -->
-        <div class="footer-textcontainer">
-          <h1 id="text-anim">Explore leather luxury from the Maison.</h1>
+    <div class="section4">
+      <div class="section4inner">
+        <div class="section4left">
+          <div class="scrollingtext2">
+            <h1 class="heading-text2">The testament to taste.</h1>
+            <h1 class=" heading-text2 heading-text2-res">The testament to taste.</h1>
+            <h1 class="heading-text-bottom2">SHOP BEHNO SIGNATURES.</h1>
+          </div>
         </div>
-        <div class="staggerEffect">
-          <div class="animbtn">
-            <a class="btn" href="#">Metallics</a>
+      </div>
+      <div class="gridd">
+        <div></div>
+        <div>
+          <div style="height: fit-content">
+            <div class="scrollingtext-res-section2">
+              <h1 class="heading-text-res-section2">The testament to taste.</h1>
+              <h1 class="heading-text-bottom-res-section2">SHOP BEHNO SIGNATURES.</h1>
+            </div>
           </div>
-          <div class="animbtn">
-            <a class="btn" href="#">Crossbody bags</a>
-          </div>
-          <div class="animbtn">
-            <a class="btn" href="#">Shoulders bags</a>
-          </div>
-          <div class="animbtn">
-            <a class="btn" href="#">Mini bags</a>
-          </div>
-          <div class="animbtn">
-            <a class="btn" href="#">Embellished</a>
+          <div class="rightside imageContainer">
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- section 5=======================================end -->
+  <section>
+    <div class="section4">
+      <div class="section4inner">
+        <div class="section4left">
+          <div class="scrollingtext2">
+            <h1 class="heading-text2">The testament to taste.</h1>
+            <h1 class=" heading-text2 heading-text2-res">The testament to taste.</h1>
+            <h1 class="heading-text-bottom2">SHOP BEHNO SIGNATURES.</h1>
+          </div>
+        </div>
+      </div>
+      <div class="gridd">
+        <div></div>
+        <div>
+          <div style="height: fit-content">
+            <div class="scrollingtext-res-section2">
+              <h1 class="heading-text-res-section2">The testament to taste.</h1>
+              <h1 class="heading-text-bottom-res-section2">SHOP BEHNO SIGNATURES.</h1>
+            </div>
+          </div>
+          <div class="rightside imageContainer">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- section 4 ===================================== end -->
 
   <!-- gsap cdn============================ start -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
@@ -491,226 +357,63 @@
   <!-- gsap script =========================== start -->
   <script>
     gsap.registerPlugin(ScrollTrigger);
-    ScrollTrigger.matchMedia({
-      // Desktop
-      "(min-width: 769px)": function () {
-        const tl = gsap
-          .timeline({
+
+    // Function to create GSAP scroll animation for a given section
+    function animateSection(section) {
+      ScrollTrigger.matchMedia({
+        "(min-width: 769px)": function () {
+          gsap.timeline({
             scrollTrigger: {
-              trigger: ".baner-parent",
-              scrub: 3,
+              trigger: section.querySelector('.section4inner'),
+              scrub: 2,
               start: "top top",
-              end: "60% center",
+              end: "100% center",
             },
           })
-          .to(
-            ".baner-parent",
-            {
-              width: "50%",
+            .to(section.querySelector(".section4inner"), {
               position: "sticky",
               top: 0,
-            },
-            "a"
-          );
-        let tl2Triggered = false;
-
-        // section 4 ================================================================== gsap
-
-        const tl4 = gsap
-          .timeline({
+            }, "b")
+            .to(section.querySelector(".scrollingtext2"), {
+              margin: "0",
+              duration: 1,
+            }, "b");
+        },
+        "(max-width: 768px)": function () {
+          gsap.timeline({
             scrollTrigger: {
-              trigger: ".section4inner",
-              scrub: 3,
-              start: "top top",
-              end: "60% center",
+              trigger: section.querySelector('.section4left'),
+              start: "20% 20%",
+              end: "bottom -100%",
+              scrub: true,
             },
           })
-          .to(".section4inner", {
-            width: "50%",
-            position: "sticky",
-            top: 0,
-          });
+            .fromTo(section.querySelector('.section4left'), {
+              backgroundSize: "110%",
+            }, {
+              backgroundSize: "100%",
+            });
+        },
+      });
+    }
 
-        // section 4 ================================================================== gsap
-      },
-
-      "(max-width: 769px)": function () {
-
-        gsap.fromTo(".left", {
-          duration: 0.5,
-          backgroundSize: "120%",
-        }, {
-          scrollTrigger: {
-            trigger: ".left",
-            start: "top 10%",
-            end: "bottom 70%",
-            scrub: 2,
-          },
-          backgroundSize: "100%",
-        });
-
-        gsap.fromTo(".section4left", {
-          // duration: 0.5,
-          backgroundSize: "110%",
-        }, {
-          scrollTrigger: {
-            trigger: ".section4left",
-            start: "top 10%",
-            end: "bottom 70%",
-            scrub: 1,
-            markers: true
-          },
-          backgroundSize: "100%",
-        });
-
-      }
+    // Apply animation to each section
+    document.querySelectorAll(".section4").forEach((section) => {
+      animateSection(section);
     });
 
-    // section 1================================================================== gsap
-    const tlbanner = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".section1",
-        scrub: 3,
-        start: "top top",
-        end: "bottom -100%",
-        pin: true,
-        pinSpacing: false,
-        anticipatePin: 1,
-      },
-    });
-
-    tlbanner.fromTo(
-      ".section1",
-      {
-        scale: 1,
-      },
-      {
-        scale: 1.2,
-      }
-    );
-
-    const t2banner = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".section2",
-        scrub: 3,
-        start: "0% 0%",
-        end: "bottom -100%",
-        pin: true,
-        pinSpacing: false,
-        anticipatePin: 1,
-      },
-    });
-
-    t2banner.fromTo(
-      ".section2",
-      {
-        scale: 1,
-      },
-      {
-        scale: 1.2,
-      }
-    );
-
-    gsap.from(".animbtn", {
-      y: 100,
-      duration: 0.5,
-      stagger: 0.2,
-      ease: "sine.out",
-      scrollTrigger: {
-        trigger: ".staggerEffect",
-        start: "top 80%",
-        end: "bottom 100%",
-        scrub: 3,
-      },
-    });
-
-
-    gsap.fromTo(".maisonsec", {
-      duration: 0.5,
-      backgroundSize: "130%",
-    }, {
-      scrollTrigger: {
-        trigger: ".maisonsec",
-        start: "top 20%",
-        end: "bottom 90%",
-        scrub: 2,
-      },
-      backgroundSize: "110%",
-    });
-
-
-    // smouth scroll effect
-
-    gsap.to(".textani", {
-      duration: 2,
-      text: "thank you for waiting",
-      delay: 1,
-    });
-
-    const scrollSpeed = 1.5; // Adjust the scroll speed (higher value = faster scroll)
-    const smoothScroll = true; // Enable or disable smooth scroll
-    let targetScrollPosition = window.scrollY; // Target scroll position
-    let isScrolling = false; // Flag to check if scrolling is in progress
-
-    // Function to handle scroll events
-    const scroll = (event) => {
-      event.preventDefault(); // Prevent default scroll behavior
-      const delta = event.deltaY * scrollSpeed; // Calculate scroll delta
-      targetScrollPosition += delta; // Update target scroll position
-
-      // Ensure target position is within bounds
-      targetScrollPosition = Math.max(
-        0,
-        Math.min(
-          targetScrollPosition,
-          document.documentElement.scrollHeight - window.innerHeight
-        )
-      );
-
-      if (!isScrolling) {
-        isScrolling = true; // Set scrolling flag
-        window.requestAnimationFrame(smoothScrollTo); // Start smooth scroll animation
-      }
-    };
-
-    // Function to smoothly scroll to the target position
-    const smoothScrollTo = () => {
-      const currentY = window.scrollY; // Get current scroll position
-      const diff = targetScrollPosition - currentY; // Calculate difference to target position
-      const scrollStep = diff / 20; // Calculate scroll step (adjust this value to control smoothness)
-
-      // Stop scrolling when close enough to the target or at scroll boundaries
-      if (
-        Math.abs(diff) > 1 &&
-        currentY !== 0 &&
-        currentY !==
-        document.documentElement.scrollHeight - window.innerHeight
-      ) {
-        window.scrollBy(0, scrollStep); // Scroll by the calculated step
-        window.requestAnimationFrame(smoothScrollTo); // Continue the animation
-      } else {
-        window.scrollTo(0, targetScrollPosition); // Directly scroll to the target position
-        isScrolling = false; // Reset scrolling flag
-      }
-    };
-
-    // Add event listener for scroll events
-    window.addEventListener("wheel", scroll, { passive: false });
-
-    // smouth scroll effect
-
-    // dynamic image
+    // Dynamic image loader for each section
     const imageContainers = document.querySelectorAll(".imageContainer");
 
     // Array of image sources
     const images = [
+      "./images/productimage2.png",
       "./images/productimage1.png",
       "./images/productimage2.png",
-      "./images/productimage3.png",
-      "./images/productimage1.png",
+      "./images/productimage2.png",
       "./images/productimage2.png",
       "./images/productimage3.png",
-      "./images/productimage1.png",
+      "./images/productimage2.png",
       "./images/productimage2.png",
     ];
 
@@ -724,45 +427,6 @@
         imageContainer.appendChild(div);
       });
     });
-
-    // footer text animation
-    document.addEventListener("DOMContentLoaded", function (event) {
-      animation_text_1("#text-anim");
-    });
-
-    function animation_text_1(element) {
-      var newText = "";
-      var theText = document.querySelector(element);
-      for (i = 0; i < theText.innerText.length; i++) {
-        newText += "<div>";
-        if (theText.innerText[i] == " ") {
-          newText += "&nbsp;";
-        } else {
-          newText += theText.innerText[i];
-        }
-        newText += "</div>";
-      }
-      theText.innerHTML = newText;
-      gsap.fromTo(
-        element + " div",
-        {
-          opacity: 0,
-          y: 90,
-        },
-        {
-          duration: 2,
-          opacity: 1,
-          y: 0,
-          stagger: 0.03,
-          ease: "elastic(1.2, 0.5)",
-          scrollTrigger: {
-            trigger: element,
-            start: "top 70%",
-            toggleActions: "restart none none reverse",
-          },
-        }
-      );
-    }
   </script>
 
   <!-- gsap script ==================== end  -->
